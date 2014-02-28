@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MCDViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDt-gy-mXk"/>
+                        <viewControllerLayoutGuide type="bottom" id="iIz-n6-v8T"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-HP-sr3">
+                                <rect key="frame" x="94" y="96" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Zb-Pg-VCm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cg-hm-i7t">
+                                <rect key="frame" x="40" y="134" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98689720889999999" green="1" blue="0.67974769290000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Cg-hm-i7t" secondAttribute="trailing" constant="40" id="7HL-eg-IIq"/>
+                            <constraint firstItem="MCF-HP-sr3" firstAttribute="top" secondItem="QDt-gy-mXk" secondAttribute="bottom" constant="76" id="9RE-Wt-FAt"/>
+                            <constraint firstAttribute="centerX" secondItem="MCF-HP-sr3" secondAttribute="centerX" id="Asg-pP-bEn"/>
+                            <constraint firstItem="6Cg-hm-i7t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="INh-pV-d1U"/>
+                            <constraint firstItem="iIz-n6-v8T" firstAttribute="top" secondItem="6Cg-hm-i7t" secondAttribute="bottom" constant="306" id="KCk-Hw-to4"/>
+                            <constraint firstItem="MCF-HP-sr3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PjZ-1k-7jt"/>
+                            <constraint firstAttribute="trailing" secondItem="MCF-HP-sr3" secondAttribute="trailing" priority="749" constant="96" id="Zp8-vq-JKm"/>
+                            <constraint firstItem="6Cg-hm-i7t" firstAttribute="top" secondItem="MCF-HP-sr3" secondAttribute="bottom" constant="8" id="l2K-KG-9dv"/>
+                            <constraint firstItem="MCF-HP-sr3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" priority="749" constant="96" id="oef-Lw-xCY"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MCF-HP-sr3" secondAttribute="trailing" id="wzF-x7-h0J"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autoResizeTextField" destination="MCF-HP-sr3" id="gcs-Ig-Iu8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
